@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && npm run build:watch",
-    "build": "./node_modules/.bin/gulp sass",
-    "build:watch": "./node_modules/.bin/gulp watch"
+    "start": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp build",
+    "serve": "./node_modules/.bin/gulp serve",
+    "sass": "./node_modules/.bin/gulp sass",
+    "sass:watch": "./node_modules/.bin/gulp watch"
   },
   "repository": {
     "type": "git",
@@ -20,9 +22,10 @@
   },
   "homepage": "https://github.com/topscores/epretest-ui#readme",
   "dependencies": {
-    "react": "^0.13.3",
-    "react-router": "1.0.0-beta2",
-    "lodash": "^3.10.0"
+    "lodash": "^3.10.0",
+    "react": "0.14.*",
+    "react-dom": "^0.14.3",
+    "react-router": "1.0.2"
   },
   "devDependencies": {
     "browserify": "^9.0.3",
