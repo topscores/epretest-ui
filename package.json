@@ -1,0 +1,25 @@
+{
+  "name": "epretest-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp sass",
+    "build:watch": "./node_modules/.bin/gulp sass:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/topscores/epretest-ui.git"
+  },
+  "keywords": [],
+  "author": "Arnupharp Viratanapanu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/topscores/epretest-ui/issues"
+  },
+  "homepage": "https://github.com/topscores/epretest-ui#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.0"
+  }
+}
