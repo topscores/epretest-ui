@@ -6,11 +6,11 @@ var ReactDOM = require('react-dom');
 var Header = React.createClass({
   render: function() {
     return (
-      <nav className="navbar navbar-default">
-        <div className="container-fluid">
+      <nav className="navbar navbar-fixtop navbar-transparent">
+        <div className="container">
           <div className="navbar-header">
             <a className="navbar-brand">
-              <img className="logo-img" alt="e-pretest" src="img/logo.png" />
+              <img className="logo-img" alt="e-pretest" src="public/img/logo.png" />
             </a>
           </div>
         </div>

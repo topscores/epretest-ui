@@ -1,0 +1,24 @@
+{
+  "name": "epretest-ui",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Arnupharp Viratanapanu"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/topscores/epretest-ui",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6"
+  }
+}

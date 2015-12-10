@@ -12,6 +12,11 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 
+var config = {
+    bootstrapDir: './bower_components/bootstrap-sass',
+    publicDir: './public',
+};
+
 var notify = function(error) {
   var message = 'In: ';
   var title = 'Error: ';
@@ -75,13 +80,20 @@ gulp.task('serve', function(done) {
 });
 
 gulp.task('sass', function () {
-  gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(concat('css/style.css'))
+  gulp.src('./sass/app.scss')
+    .pipe(sass({
+      includePaths: [config.bootstrapDir + '/assets/stylesheets'],
+    }).on('error', sass.logError))
+    .pipe(concat(config.publicDir + '/css/style.css'))
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['build', 'serve', 'sass', 'watch']);
+gulp.task('fonts', function() {
+    return gulp.src(config.bootstrapDir + '/assets/fonts/**/*')
+    .pipe(gulp.dest(config.publicDir + '/fonts'));
+});
+
+gulp.task('default', ['build', 'serve', 'sass', 'fonts', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
