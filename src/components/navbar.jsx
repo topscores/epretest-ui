@@ -1,0 +1,34 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+Navbar = React.createClass({
+  render: function() {
+    return (
+      <nav className="navbar navbar-default navbar-fixtop navbar-transparent">
+        <div className="container">
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu-collapse" aria-expanded="false">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            <a className="navbar-brand">
+              <img className="logo-img" alt="e-pretest" src="public/img/logo.png" />
+            </a>
+          </div>
+
+          <div className="collapse navbar-collapse" id="navbar-menu-collapse">
+            <ul className="nav navbar-nav navbar-right">
+              {this.props.navItems.map(function(navItem) {
+                return <li key={navItem.title}><a href={navItem.href}>{navItem.title}</a></li>
+              })}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+});
+
+module.exports = Navbar;

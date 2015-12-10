@@ -2,19 +2,19 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Navbar  = require('./navbar');
+
+var navItems = [
+  {href: '#', title: 'ข้อสอบ'},
+  {href: '#', title: 'ราคา'},
+];
 
 var Header = React.createClass({
   render: function() {
     return (
-      <nav className="navbar navbar-fixtop navbar-transparent">
-        <div className="container">
-          <div className="navbar-header">
-            <a className="navbar-brand">
-              <img className="logo-img" alt="e-pretest" src="public/img/logo.png" />
-            </a>
-          </div>
-        </div>
-      </nav>
+      <div>
+        <Navbar navItems={navItems}/>
+      </div>
     );
   }
 });

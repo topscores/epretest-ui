@@ -1,12 +1,18 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+@import 'epretest/variable'
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
+$splash-bg-color:   #fff;
+$splash-color:      #fff;
 
 .logo-img {
-  height: 25px;
-  width: 25px;
+  height: 50px;
+  width: 50px;
+}
+
+.splash {
+  background-attachment: fixed;
+  background-color: $splash-bg-color;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  color: $splash-primary-color;
+  text-align: center;
 }
