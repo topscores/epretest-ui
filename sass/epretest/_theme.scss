@@ -1,5 +1,13 @@
-.navbar-nav {
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+@import 'bootstrap/buttons';
+@import 'bootstrap/fonts';
+@import 'bootstrap/normalize';
+
+.navbar {
   border-radius: 0;
+  margin-bottom: 0;
 }
 
 .navbar-header {
