@@ -1,13 +1,25 @@
-$border-radius-base: 0 !default;
-$border-radius-large: 0 !default;
-$border-radius-small: 0 !default;
-
-$btn-default-bg: #21abc7;
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+$btn-default-bg:    #21abc7;
 $btn-default-color: #fff;
 
-$navbar-height: 80px;
-$navbar-margin-bottom: 0;
-$navbar-padding-vertical: 15px;
+$btn-primary-bg:    #fca311;
+$btn-primary-color: #fff;
+
+//== Navbar
+//
+//## For customize navbar
+
+// Remove border radius from navbar
+$border-radius-base:  0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+
+// Make navbar height match the brand's logo height
+$navbar-height:             80px;
+$navbar-margin-bottom:      0;
+$navbar-padding-vertical:   15px;
 $navbar-padding-horizontal: 15px;
 
 $navbar-default-bg: transparent;

@@ -1,10 +1,10 @@
-@import 'bootstrap/variables';
-@import 'bootstrap/mixins';
+@import 'bootstrap-custom/variables';
+@import 'bootstrap-custom/mixins';
 
-@import 'bootstrap/buttons';
-@import 'bootstrap/fonts';
-@import 'bootstrap/normalize';
-@import 'bootstrap/navbar';
+@import 'bootstrap-custom/buttons';
+@import 'bootstrap-custom/fonts';
+@import 'bootstrap-custom/normalize';
+@import 'bootstrap-custom/navbar';
 
 @import 'epretest/variables';
 
@@ -12,6 +12,7 @@
 @import 'epretest/mixins';
 
 //= Components
+//
 //## Add @import to load components in epretest directory here
 //** e.g.
 //@import 'epretest/spash' to import _splash.scss
