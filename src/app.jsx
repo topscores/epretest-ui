@@ -101,15 +101,26 @@ var App = React.createClass({
 
   renderExam: function() {
     return (
-      <div class="row">
+      <div className="row">
         {examList.map(function(exam) {
           return (
-            <div className="col-lg-4 col-md-4 col-sm-2">
+            <div key={exam.name} className="col-lg-4 col-md-4 col-sm-2">
               <div className="exam-card">
                 <h3>{exam.name}</h3>
+                {this.renderSubjects(exam.name, exam.subjects)}
               </div>
             </div>
           );
+        }.bind(this))}
+      </div>
+    );
+  },
+
+  renderSubjects: function(exam, subjects) {
+    return (
+      <div>
+        {subjects.map(function(subject) {
+          return <li key={exam + '_' + subject}>{subject}</li>
         })}
       </div>
     );
