@@ -1,0 +1,14 @@
+.logo-img {
+  height: 50px;
+}
+
+@include splash($splash-color, $splash-bg-color, $splash-padding-bottom, $splash-padding-top);
+
+.free-try {
+  margin-top: 40px;
+
+  .btn {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+}

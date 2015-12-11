@@ -5,3 +5,17 @@
 @import 'bootstrap/fonts';
 @import 'bootstrap/normalize';
 @import 'bootstrap/navbar';
+
+@import 'epretest/variables';
+
+//= Mixins
+@import 'epretest/mixins';
+
+//= Components
+//## Add @import to load components in epretest directory here
+//** e.g.
+//@import 'epretest/spash' to import _splash.scss
+
+//= Page specific style
+//## The page specific styles must be imported last
+@import 'epretest/pages';
