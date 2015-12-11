@@ -110,7 +110,7 @@ var App = React.createClass({
       var exam = examList[i];
       result.push(<div key={exam.name} className="col-lg-4 col-md-4 col-sm-6">
         <div className="exam-card">
-          <h3>{exam.name}</h3>
+          <div className="title"><h3>{exam.name}</h3></div>
           {this.renderSubjects(exam.name, exam.subjects)}
         </div>
       </div>);
@@ -130,9 +130,11 @@ var App = React.createClass({
 
   renderSubjects: function(exam, subjects) {
     return (
-      subjects.map(function(subject) {
-        return <li key={exam + '_' + subject}>{subject}</li>
-      })
+      <div className="subject-list">
+        {subjects.map(function(subject) {
+          return <li key={exam + '_' + subject}>{subject}</li>
+        })}
+      </div>
     );
   }
 });
