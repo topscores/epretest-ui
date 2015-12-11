@@ -87,6 +87,12 @@ var examList = [
 
 ];
 
+var addClearfixes = [
+  {className: 'visible-xs', examCount: '2'},
+  {className: 'visible-md', examCount: '3'},
+  {className: 'visible-lg', examCount: '3'},
+];
+
 var App = React.createClass({
   render: function() {
     return (
@@ -98,31 +104,35 @@ var App = React.createClass({
       </div>
     );
   },
-
   renderExam: function() {
+    var result = [];
+    for (var i = 0;i < examList.length; i++) {
+      var exam = examList[i];
+      result.push(<div key={exam.name} className="col-lg-4 col-md-4 col-sm-6">
+        <div className="exam-card">
+          <h3>{exam.name}</h3>
+          {this.renderSubjects(exam.name, exam.subjects)}
+        </div>
+      </div>);
+      result.push(addClearfixes.map(function(clearfix) {
+        if ((i + 1) % clearfix.examCount == 0) {
+          return <div className={"clearfix " + clearfix.className}></div>
+        }
+      }));
+    }
+
     return (
       <div className="row">
-        {examList.map(function(exam) {
-          return (
-            <div key={exam.name} className="col-lg-4 col-md-4 col-sm-2">
-              <div className="exam-card">
-                <h3>{exam.name}</h3>
-                {this.renderSubjects(exam.name, exam.subjects)}
-              </div>
-            </div>
-          );
-        }.bind(this))}
+        {result}
       </div>
     );
   },
 
   renderSubjects: function(exam, subjects) {
     return (
-      <div>
-        {subjects.map(function(subject) {
-          return <li key={exam + '_' + subject}>{subject}</li>
-        })}
-      </div>
+      subjects.map(function(subject) {
+        return <li key={exam + '_' + subject}>{subject}</li>
+      })
     );
   }
 });
