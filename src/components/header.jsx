@@ -4,16 +4,11 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Navbar  = require('./navbar');
 
-var navItems = [
-  {href: '#', title: 'ข้อสอบ'},
-  {href: '#', title: 'ราคา'},
-];
-
 var Header = React.createClass({
   render: function() {
     return (
       <div>
-        <Navbar navItems={navItems} />
+        <Navbar navItems={this.props.navItems} />
         <div className="splash">
           <h1>Practices make perfect</h1>
           <h3>เตรียมความพร้อมก่อนเข้าสนามสอบ ด้วยข้อสอบพร้อมเฉลยกว่า 10,000 ข้อ</h3>

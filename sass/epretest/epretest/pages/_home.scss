@@ -12,3 +12,9 @@
     padding: 10px 20px;
   }
 }
+
+.exam-card {
+  border:         1px solid $exam-card-border;
+  border-radius:  4px;
+  padding:        $exam-card-vert-padding $exam-card-horz-padding;
+}
