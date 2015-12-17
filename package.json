@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/topscores/epretest-ui#readme",
   "dependencies": {
+    "history": "^1.13.1",
     "lodash": "^3.10.0",
     "react": "0.14.*",
     "react-dom": "^0.14.3",
