@@ -1,8 +1,10 @@
 'use strict';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Header = require('./components/header');
+var React       =   require('react');
+var ReactDOM    =   require('react-dom');
+var Header      =   require('./components/Header');
+var SectionTitle=   require('./components/SectionTitle');
+var ExamCard    =   require('./components/ExamCard');
 
 var navItems = [
   {href: '#', title: 'ข้อสอบ'},
@@ -99,41 +101,11 @@ var App = React.createClass({
       <div className="app">
         <Header navItems={navItems} />
         <div className="container">
-            {this.renderExam()}
+          <SectionTitle name="เรามีข้อสอบครบถ้วนทุกวิชา" description="เริ่มเตรียมตัวสอบเสียแต่เนิ่นๆ" />
+            {examList.map(function(exam) {
+            return <ExamCard exam={exam} />;
+          })}
         </div>
-      </div>
-    );
-  },
-  renderExam: function() {
-    var result = [];
-    for (var i = 0;i < examList.length; i++) {
-      var exam = examList[i];
-      result.push(<div key={exam.name} className="col-lg-4 col-md-4 col-sm-6">
-        <div className="exam-card">
-          <div className="title"><h3>{exam.name}</h3></div>
-          {this.renderSubjects(exam.name, exam.subjects)}
-        </div>
-      </div>);
-      result.push(addClearfixes.map(function(clearfix) {
-        if ((i + 1) % clearfix.examCount == 0) {
-          return <div className={"clearfix " + clearfix.className}></div>
-        }
-      }));
-    }
-
-    return (
-      <div className="row">
-        {result}
-      </div>
-    );
-  },
-
-  renderSubjects: function(exam, subjects) {
-    return (
-      <div className="subject-list">
-        {subjects.map(function(subject) {
-          return <li key={exam + '_' + subject}>{subject}</li>
-        })}
       </div>
     );
   }
