@@ -3,7 +3,7 @@ $splash-overlay-end:    rgba($splash-bg-color, $splash-overlay-opacity);
 
 @mixin splash($color, $bg-color, $padding-bottom, $padding-top) {
   .splash {
-    background: linear-gradient($splash-overlay-start, $splash-overlay-end), url('../img/splash.jpeg');
+    background: linear-gradient($splash-overlay-start, $splash-overlay-end), url('../img/splash.jpg');
     background-color: $bg-color;
     background-size: cover;
     color: $color;
