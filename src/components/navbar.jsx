@@ -23,7 +23,7 @@ Navbar = React.createClass({
               {this.props.navItems.map(function(navItem) {
                 return <li key={navItem.title}><a href={navItem.href}>{navItem.title}</a></li>
               })}
-              <li key="signup"><a href="#"><input type="button" className="btn btn-primary" value="Sign up"/></a></li>
+              <li key="signup"><a href="#"><input type="button" className="btn btn-primary -text-large" value="Sign up"/></a></li>
             </ul>
           </div>
         </div>

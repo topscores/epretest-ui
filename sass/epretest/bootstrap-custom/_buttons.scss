@@ -2,6 +2,15 @@
   &:hover {
     @include animate-bg;
   }
+
+  &.-text-large {
+    font-size:  18px;
+  }
+
+  &.-text-xlarge {
+    font-size:  30px;
+  }
+
   border: 0;
   border-radius: 4px;
 }
