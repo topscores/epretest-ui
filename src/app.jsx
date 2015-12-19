@@ -5,6 +5,8 @@ var ReactDOM      =   require('react-dom');
 var Header        =   require('./components/Header');
 var SectionHeader =   require('./components/SectionHeader');
 var ExamCard      =   require('./components/ExamCard');
+var SubjectCard   =   require('./components/SubjectCard');
+var Footer        =   require('./components/Footer');
 
 var navItems = [
   {href: '#', title: 'ข้อสอบ'},
@@ -105,15 +107,51 @@ var examList = [
 
 ];
 
+var subjectList = [
+  {
+    name: 'เลข',
+    img:  'public/img/math.png'
+  },
+  {
+    name: 'ฟิสิกส์',
+    img:  'public/img/physics.png'
+  },
+  {
+    name: 'เคมี',
+    img:  'public/img/chemistry.png'
+  },
+  {
+    name: 'ชีวะ',
+    img:  'public/img/bio.png'
+  },
+  {
+    name: 'ภาษาอังกฤษ',
+    img:  'public/img/english.png'
+  },
+  {
+    name: 'ภาษาไทย',
+    img:  'public/img/thai.png'
+  },
+  {
+    name: 'ภาษาญี่ปุ่น',
+    img:  'public/img/japanese.png'
+  },
+  {
+    name: 'ประวัติศาสตร์',
+    img:  'public/img/history.png'
+  },
+];
+
+
 var section1 = {
     name:          'ครบถ้วนทุกการสอบ',
     descriptions:  ['เตรียมตัวเสียแต่เนิ่นๆ', 'ด้วยคลังข้อสอบพร้อมเฉลยละเอียด ให้น้องๆได้ฝึกทำจนมั่นใจ']
-}
+};
 
 var section2 = {
     name:          'พร้อมสอบทุกวิชา',
     descriptions:  ['เรามีข้อสอบให้ฝึกทำครบถ้วนทุกวิชา ทุกหัวข้อ', 'พร้อมเฉลยละเอียดโดยทีมงานวิชาการ']
-}
+};
 
 var App = React.createClass({
   render: function() {
@@ -134,10 +172,15 @@ var App = React.createClass({
           <div className="container">
             <SectionHeader {...section2} />
             <div className="row">
-              {examList.map(function(exam) {
-                return <ExamCard key={exam.tag} {...exam} />;
+              {subjectList.map(function(subject) {
+                return <SubjectCard {...subject} />;
               })}
             </div>
+          </div>
+        </section>
+        <section className="section-grey">
+          <div className="container">
+            <Footer />
           </div>
         </section>
       </div>
