@@ -1,0 +1,14 @@
+.exam-card {
+  >.tag {
+    background-color:  $exam-card-bg-color;
+    border:            3px solid #000;
+    border-radius:     50%;
+    font-size:         30px;
+    font-weight:       600;
+    height:            $exam-card-tag-size;
+    line-height:       $exam-card-tag-size;
+    margin:            50px;
+    text-align:        center;
+    width:             $exam-card-tag-size;
+  }
+}

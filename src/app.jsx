@@ -14,6 +14,7 @@ var navItems = [
 var examList = [
   {
     name: 'โอเน็ท',
+    tag: 'o-net',
     subjects: [
       'ภาษาไทย',
       'สังคม',
@@ -27,6 +28,7 @@ var examList = [
   },
   {
     name: '9 วิชาสามัญ',
+    tag:  '๙',
     subjects: [
       'ภาษาไทย',
       'สังคม',
@@ -39,6 +41,7 @@ var examList = [
   },
   {
     name: 'GAT',
+    tag: 'GAT',
     subjects: [
       'GAT เชื่อมโยง',
       'GAT ภาษาอังกฤษ',
@@ -46,6 +49,7 @@ var examList = [
   },
   {
     name: 'PAT',
+    tag: 'PAT',
     subjects: [
       'PAT 1 ความถนัดทางคณิตศาสตร์',
       'PAT 2 ความถนัดทางวิทยาศาสตร์',
@@ -61,12 +65,14 @@ var examList = [
   },
   {
     name: 'ข้อสอบทุน',
+    tag: 'ทุน',
     subjects: [
       'ข้อสอบทดสอบระบบ e-pretest',
     ],
   },
   {
     name: 'ความรู้ทั่วไป',
+    tag: 'Misc',
     subjects: [
       'IELTS',
       'ความรู้ทั่วไป',
@@ -75,12 +81,14 @@ var examList = [
   },
   {
     name: 'ข้อสอบโควตา',
+    tag: 'โควตา',
     subjects: [
       'มหาวิทยาลัยขอนแก่น',
     ],
   },
   {
     name: 'ข้อสอบเก่า',
+    tag: 'Ex',
     subjects: [
       'ภาษาไทย',
       'สังคมศึกษา',
@@ -102,8 +110,8 @@ var App = React.createClass({
         <Header navItems={navItems} />
         <div className="container">
           <SectionTitle name="เตรียมตัวเสียแต่เนิ่นๆ" description="ด้วยคลังข้อสอบพร้อมเฉลยละเอียด ให้น้องๆได้ฝึกทำจนมั่นใจ" />
-            {examList.map(function(exam) {
-            return <ExamCard exam={exam} />;
+          {examList.map(function(exam) {
+            return <ExamCard key={exam.tag} {...exam} />;
           })}
         </div>
       </div>
