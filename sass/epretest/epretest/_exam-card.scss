@@ -1,12 +1,13 @@
 .exam-card {
   >.tag {
+    color:             $exam-card-color;
     background-color:  $exam-card-bg-color;
     border:            $exam-card-border;
     border-radius:     10px;
     display:           inline-block;
     float:             left;
     font-size:         24px;
-    font-weight:       600;
+    font-weight:       400;
     height:            $exam-card-tag-size;
     line-height:       $exam-card-tag-size;
     text-align:        center;
