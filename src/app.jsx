@@ -110,6 +110,11 @@ var section1 = {
     descriptions:  ['เตรียมตัวเสียแต่เนิ่นๆ', 'ด้วยคลังข้อสอบพร้อมเฉลยละเอียด ให้น้องๆได้ฝึกทำจนมั่นใจ']
 }
 
+var section2 = {
+    name:          'พร้อมสอบทุกวิชา',
+    descriptions:  ['เรามีข้อสอบให้ฝึกทำครบถ้วนทุกวิชา ทุกหัวข้อ', 'พร้อมเฉลยละเอียดโดยทีมงานวิชาการ']
+}
+
 var App = React.createClass({
   render: function() {
     return (
@@ -125,7 +130,16 @@ var App = React.createClass({
             </div>
           </div>
         </section>
-
+        <section>
+          <div className="container">
+            <SectionHeader {...section2} />
+            <div className="row">
+              {examList.map(function(exam) {
+                return <ExamCard key={exam.tag} {...exam} />;
+              })}
+            </div>
+          </div>
+        </section>
       </div>
     );
   }
