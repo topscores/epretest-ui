@@ -101,7 +101,7 @@ var App = React.createClass({
       <div className="app">
         <Header navItems={navItems} />
         <div className="container">
-          <SectionTitle name="เรามีข้อสอบครบถ้วนทุกวิชา" description="เริ่มเตรียมตัวสอบเสียแต่เนิ่นๆ" />
+          <SectionTitle name="เตรียมตัวเสียแต่เนิ่นๆ" description="ด้วยคลังข้อสอบพร้อมเฉลยละเอียด ให้น้องๆได้ฝึกทำจนมั่นใจ" />
             {examList.map(function(exam) {
             return <ExamCard exam={exam} />;
           })}
