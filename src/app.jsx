@@ -1,10 +1,10 @@
 'use strict';
 
-var React       =   require('react');
-var ReactDOM    =   require('react-dom');
-var Header      =   require('./components/Header');
-var SectionTitle=   require('./components/SectionTitle');
-var ExamCard    =   require('./components/ExamCard');
+var React         =   require('react');
+var ReactDOM      =   require('react-dom');
+var Header        =   require('./components/Header');
+var SectionHeader =   require('./components/SectionHeader');
+var ExamCard      =   require('./components/ExamCard');
 
 var navItems = [
   {href: '#', title: 'ข้อสอบ'},
@@ -14,7 +14,8 @@ var navItems = [
 var examList = [
   {
     name: 'โอเน็ท',
-    tag: 'o-net',
+    description: 'แฮปปี้อินดอร์ซูม สตรอเบอรี รูบิค รีสอร์ตสโตนบูติก',
+    tag: 'O-NET',
     subjects: [
       'ภาษาไทย',
       'สังคม',
@@ -28,7 +29,8 @@ var examList = [
   },
   {
     name: '9 วิชาสามัญ',
-    tag:  '๙',
+    description: 'แฮปปี้อินดอร์ซูม สตรอเบอรี รูบิค รีสอร์ตสโตนบูติก',
+    tag:  '9 วิชา',
     subjects: [
       'ภาษาไทย',
       'สังคม',
@@ -41,6 +43,7 @@ var examList = [
   },
   {
     name: 'GAT',
+    description: 'แฮปปี้อินดอร์ซูม สตรอเบอรี รูบิค รีสอร์ตสโตนบูติก',
     tag: 'GAT',
     subjects: [
       'GAT เชื่อมโยง',
@@ -49,6 +52,7 @@ var examList = [
   },
   {
     name: 'PAT',
+    description: 'แฮปปี้อินดอร์ซูม สตรอเบอรี รูบิค รีสอร์ตสโตนบูติก',
     tag: 'PAT',
     subjects: [
       'PAT 1 ความถนัดทางคณิตศาสตร์',
@@ -65,6 +69,7 @@ var examList = [
   },
   {
     name: 'ข้อสอบทุน',
+    description: 'แฮปปี้อินดอร์ซูม สตรอเบอรี รูบิค รีสอร์ตสโตนบูติก',
     tag: 'ทุน',
     subjects: [
       'ข้อสอบทดสอบระบบ e-pretest',
@@ -72,6 +77,7 @@ var examList = [
   },
   {
     name: 'ความรู้ทั่วไป',
+    description: 'แฮปปี้อินดอร์ซูม สตรอเบอรี รูบิค รีสอร์ตสโตนบูติก',
     tag: 'Misc',
     subjects: [
       'IELTS',
@@ -81,6 +87,7 @@ var examList = [
   },
   {
     name: 'ข้อสอบโควตา',
+    description: 'แฮปปี้อินดอร์ซูม สตรอเบอรี รูบิค รีสอร์ตสโตนบูติก',
     tag: 'โควตา',
     subjects: [
       'มหาวิทยาลัยขอนแก่น',
@@ -88,6 +95,7 @@ var examList = [
   },
   {
     name: 'ข้อสอบเก่า',
+    description: 'แฮปปี้อินดอร์ซูม สตรอเบอรี รูบิค รีสอร์ตสโตนบูติก',
     tag: 'Ex',
     subjects: [
       'ภาษาไทย',
@@ -97,23 +105,27 @@ var examList = [
 
 ];
 
-var addClearfixes = [
-  {className: 'visible-xs', examCount: '2'},
-  {className: 'visible-md', examCount: '3'},
-  {className: 'visible-lg', examCount: '3'},
-];
+var section1 = {
+    name:          'ครบถ้วนทุกการสอบ',
+    descriptions:  ['เตรียมตัวเสียแต่เนิ่นๆ', 'ด้วยคลังข้อสอบพร้อมเฉลยละเอียด ให้น้องๆได้ฝึกทำจนมั่นใจ']
+}
 
 var App = React.createClass({
   render: function() {
     return (
       <div className="app">
         <Header navItems={navItems} />
-        <div className="container">
-          <SectionTitle name="เตรียมตัวเสียแต่เนิ่นๆ" description="ด้วยคลังข้อสอบพร้อมเฉลยละเอียด ให้น้องๆได้ฝึกทำจนมั่นใจ" />
-          {examList.map(function(exam) {
-            return <ExamCard key={exam.tag} {...exam} />;
-          })}
-        </div>
+        <section className="section-grey">
+          <div className="container">
+            <SectionHeader {...section1} />
+            <div className="row">
+              {examList.map(function(exam) {
+                return <ExamCard key={exam.tag} {...exam} />;
+              })}
+            </div>
+          </div>
+        </section>
+
       </div>
     );
   }

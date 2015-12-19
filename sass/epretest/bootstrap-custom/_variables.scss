@@ -1,3 +1,7 @@
+//== Site wide
+//
+$text-shadow-color: rgba(0, 0, 0, .004);
+
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
@@ -5,7 +9,7 @@ $btn-default-bg:    #21abc7;
 $btn-default-color: #fff;
 
 $btn-primary-bg:    #fca311;
-$btn-primary-color: #fff;
+$btn-primary-color: #070707;
 
 //== Navbar
 //
@@ -21,5 +25,6 @@ $navbar-height:             80px;
 $navbar-margin-bottom:      0;
 $navbar-padding-vertical:   15px;
 $navbar-padding-horizontal: 15px;
+$navbar-nav-item-color:     #000;
 
 $navbar-default-bg: transparent;

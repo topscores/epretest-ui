@@ -1,14 +1,33 @@
 .exam-card {
   >.tag {
     background-color:  $exam-card-bg-color;
-    border:            3px solid #000;
-    border-radius:     50%;
-    font-size:         30px;
+    border:            $exam-card-border;
+    border-radius:     10px;
+    display:           inline-block;
+    float:             left;
+    font-size:         24px;
     font-weight:       600;
     height:            $exam-card-tag-size;
     line-height:       $exam-card-tag-size;
-    margin:            50px;
     text-align:        center;
     width:             $exam-card-tag-size;
   }
+
+  >.info {
+    display:           inline-block;
+    max-height:        $exam-card-tag-size;
+    overflow:          hidden;
+    padding:           0 15px;
+    width:             70%;
+  }
+
+  >.info >.description {
+    font-size:         18px;
+  }
+
+  >.info >.name {
+    font-size:         20px;
+    font-weight:       400;
+  }
+
 }

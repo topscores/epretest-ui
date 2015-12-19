@@ -1,8 +1,11 @@
-.navbar-nav {
-  >li >a {
-    font-size:   18px;
-    font-weight: 400;
-    line-height: 50px;
+.navbar-default {
+  .navbar-nav {
+    >li >a {
+      color:       $navbar-nav-item-color;
+      font-size:   18px;
+      font-weight: 400;
+      line-height: 50px;
+    }
   }
 
   >li >a >.btn {

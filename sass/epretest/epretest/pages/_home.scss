@@ -4,6 +4,14 @@
 
 @include splash($splash-color, $splash-bg-color, $splash-padding-bottom, $splash-padding-top);
 
+.splash-title {
+  font-size: 48px;
+}
+
+.splash-subtitle {
+  font-size: 30px;
+}
+
 .free-try {
   margin-top: 40px;
 }

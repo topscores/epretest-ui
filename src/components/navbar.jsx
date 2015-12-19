@@ -4,7 +4,7 @@ var ReactDOM = require('react-dom');
 Navbar = React.createClass({
   render: function() {
     return (
-      <nav className="navbar navbar-default navbar-transparent">
+      <nav className="navbar navbar-default">
         <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu-collapse" aria-expanded="false">
