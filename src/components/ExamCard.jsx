@@ -10,7 +10,7 @@ var ExamCard = React.createClass({
           <div className="tag">{this.props.tag}</div>
           <div className="info">
             <div className="name">{this.props.name}</div>
-            <div className="description">{this.props.description}</div>
+            <div className="description">{/*this.props.description*/}</div>
           </div>
         </div>
       </div>

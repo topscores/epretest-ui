@@ -110,35 +110,35 @@ var examList = [
 var subjectList = [
   {
     name: 'เลข',
-    img:  'public/img/math.png'
+    img:  'public/img/math.svg'
   },
   {
     name: 'ฟิสิกส์',
-    img:  'public/img/physics.png'
+    img:  'public/img/physics.svg'
   },
   {
     name: 'เคมี',
-    img:  'public/img/chemistry.png'
+    img:  'public/img/chemistry.svg'
   },
   {
     name: 'ชีวะ',
-    img:  'public/img/bio.png'
+    img:  'public/img/bio.svg'
   },
   {
     name: 'ภาษาอังกฤษ',
-    img:  'public/img/english.png'
+    img:  'public/img/english.svg'
   },
   {
     name: 'ภาษาไทย',
-    img:  'public/img/thai.png'
+    img:  'public/img/thai.svg'
   },
   {
     name: 'ภาษาญี่ปุ่น',
-    img:  'public/img/japanese.png'
+    img:  'public/img/japanese.svg'
   },
   {
     name: 'ประวัติศาสตร์',
-    img:  'public/img/history.png'
+    img:  'public/img/social.svg'
   },
 ];
 
