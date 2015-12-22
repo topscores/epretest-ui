@@ -137,7 +137,7 @@ var subjectList = [
     img:  'public/img/japanese.svg'
   },
   {
-    name: 'ประวัติศาสตร์',
+    name: 'สังคมศึกษา',
     img:  'public/img/social.svg'
   },
 ];
